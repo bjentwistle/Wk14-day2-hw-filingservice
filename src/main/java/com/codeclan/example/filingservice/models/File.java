@@ -23,6 +23,7 @@ public class File {
 
 
     @ManyToOne
+    @JsonIgnoreProperties({"files"})
     @JoinColumn(name = "folder_id", nullable = false)
     private Folder folder;
 

@@ -34,10 +34,19 @@ public class DataLoader implements ApplicationRunner {
         Person person1 = new Person("Sara Cox");
         personRepo.save(person1);
 
+        Person person2 = new Person("Clara Amfo");
+        personRepo.save(person2);
+
         Folder personal = new Folder("Personal", person1);
         folderRepo.save(personal);
 
+        Folder newMusic = new Folder("New Music", person2);
+        folderRepo.save(newMusic);
+
         File cvUpdated = new File("CV_updated", ".doc", 700, personal );
         fileRepo.save(cvUpdated);
+
+        File interviewNotes = new File("Interview notes", ".doc", 200, newMusic );
+        fileRepo.save(interviewNotes);
     }
 }
