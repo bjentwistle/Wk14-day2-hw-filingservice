@@ -21,6 +21,7 @@ public class Person {
     @JsonIgnoreProperties({"person"})
     @Column(name = "folders")
     private List<Folder> folders;
+    //won't be in the persons table because we only see the join on the many side of the join.
 
 
     public Person() {
